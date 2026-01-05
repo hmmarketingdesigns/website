@@ -7,7 +7,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-12">
 
         {/* MAIN FOOTER GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12 items-start">
+        <div className="
+          grid grid-cols-1
+          md:grid-cols-2
+          lg:grid-cols-4
+          gap-10
+          items-start
+        ">
 
           {/* LOGO */}
           <div className="flex justify-center md:justify-start">
@@ -19,7 +25,7 @@ export default function Footer() {
           </div>
 
           {/* BUSINESS INFO */}
-          <div className="text-center md:text-left text-sm text-gray-300 space-y-2 md:pl-4 lg:pl-6">
+          <div className="text-center md:text-left text-sm text-gray-300 space-y-2">
             <p className="font-semibold text-[#f5f5f5]">
               HM Marketing Designs
             </p>
@@ -43,7 +49,7 @@ export default function Footer() {
           </div>
 
           {/* SITE LINKS */}
-          <div className="text-center md:text-left text-sm text-gray-300 space-y-2 md:max-w-[160px] lg:max-w-none">
+          <div className="text-center md:text-left text-sm text-gray-300 space-y-2">
             <p className="font-semibold text-[#f5f5f5]">
               Links
             </p>
@@ -95,5 +101,6 @@ export default function Footer() {
     </footer>
   );
 }
+
 
 
