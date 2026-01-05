@@ -15,7 +15,7 @@ export default function Navigation() {
             alt="HM Marketing Designs Logo"
             width="294"
             height="210"
-           className="h-[105px] w-[141px]"
+           className="h-[105px] w-[137px]"
          />
         </Link>
 
