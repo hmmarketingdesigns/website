@@ -14,7 +14,7 @@ export default function Navigation() {
            src="https://raw.githubusercontent.com/hmmarketingdesigns/Images/main/Floating%20Golden%20Logo.1.png"
             width="294"
             height="210"
-           className="w-[141px] h-auto max-w-none"
+           className="w-[141px] h-auto flex-none"
            alt="HM Marketing Designs Logo"
          />
         </Link>
