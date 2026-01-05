@@ -60,7 +60,7 @@ export default function Contact() {
           Contact Us
         </h2>
         <p className="text-lg text-gray-300">
-          Let’s talk about growing your business.
+          Let's talk about growing your business.
         </p>
       </div>
 
@@ -102,7 +102,7 @@ export default function Contact() {
 
             {submitStatus === 'success' && (
               <p className="mb-6 text-gray-300">
-                Thanks — we’ll be in touch shortly.
+                Thanks — we'll be in touch shortly.
               </p>
             )}
 
@@ -116,10 +116,11 @@ export default function Contact() {
               {/* Desktop grid only */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-0.5">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-0.5">
                     Name
                   </label>
                   <input
+                    id="name"
                     type="text"
                     required
                     value={formData.name}
@@ -131,10 +132,11 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-0.5">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-0.5">
                     Email
                   </label>
                   <input
+                    id="email"
                     type="email"
                     required
                     value={formData.email}
@@ -146,10 +148,11 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-0.5">
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-0.5">
                     Phone
                   </label>
                   <input
+                    id="phone"
                     type="tel"
                     value={formData.phone}
                     onChange={(e) =>
@@ -160,10 +163,11 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-0.5">
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-0.5">
                     Company
                   </label>
                   <input
+                    id="company"
                     type="text"
                     value={formData.company}
                     onChange={(e) =>
@@ -175,10 +179,11 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-0.5">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-0.5">
                   Message
                 </label>
                 <textarea
+                  id="message"
                   rows={5}
                   required
                   value={formData.message}
@@ -217,5 +222,4 @@ export default function Contact() {
     </section>
   );
 }
-
 
