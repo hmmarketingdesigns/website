@@ -12,10 +12,10 @@ export default function Navigation() {
         <Link to="/" className="flex items-center">
           <img
            src="https://raw.githubusercontent.com/hmmarketingdesigns/Images/main/Floating%20Golden%20Logo.1.png"
-            alt="HM Marketing Designs Logo"
             width="294"
             height="210"
-           className="h-[105px] w-[137px]"
+           className="w-[141px] h-auto max-w-none"
+           alt="HM Marketing Designs Logo"
          />
         </Link>
 
