@@ -28,8 +28,9 @@ export default function Home() {
         <section className="max-w-7xl mx-auto px-6 py-24">
           <div className="text-center mb-16">
             <h1 className="sr-only">
-              National Local SEO Services, and websites design for Small Businesses and Service-Based Companies
+             SEO Services and Website Design for Small Businesses Nationwide
             </h1>
+
             <h2 className="text-5xl md:text-6xl font-bold text-[#f5f5f5] mb-6 leading-tight">
              When Customers Search for What You Offer, What Businesses Are They Finding?
             </h2>
