@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+  <!-- Map Pin -->
+  <path
+    d="M32 4c-10.5 0-19 8.5-19 19 0 14.5 19 37 19 37s19-22.5 19-37C51 12.5 42.5 4 32 4z"
+    fill="#d4af37"
+  />
+  <!-- Signal Bars -->
+  <rect x="26" y="22" width="4" height="10" rx="1" fill="#0f172a"/>
+  <rect x="31" y="18" width="4" height="14" rx="1" fill="#0f172a"/>
+</svg>
