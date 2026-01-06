@@ -2,19 +2,26 @@ import { Facebook } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-black border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-12">
 
-        {/* MAIN FOOTER GRID */}
-        <div className="
-          grid grid-cols-1
-          md:grid-cols-2
-          lg:grid-cols-4
-          gap-10
-          items-start
-        ">
-
+        <div
+          className="
+            grid grid-cols-1
+            md:grid-cols-2
+            lg:grid-cols-4
+            gap-10
+            items-start
+          "
+        >
           {/* LOGO */}
           <div className="flex justify-center md:justify-start">
             <img
@@ -58,13 +65,19 @@ export default function Footer() {
               Home
             </Link>
 
-            <Link to="/services" className="block text-[#d4af37] hover:underline">
+            <button
+              onClick={() => scrollToSection('services')}
+              className="block text-[#d4af37] hover:underline text-left"
+            >
               Services
-            </Link>
+            </button>
 
-            <Link to="/case-studies" className="block text-[#d4af37] hover:underline">
+            <button
+              onClick={() => scrollToSection('case-studies')}
+              className="block text-[#d4af37] hover:underline text-left"
+            >
               Case Studies
-            </Link>
+            </button>
 
             <a
               href="/privacy-policy.html"
@@ -89,10 +102,8 @@ export default function Footer() {
               <Facebook className="w-6 h-6 text-[#1877F2]" />
             </a>
           </div>
-
         </div>
 
-        {/* COPYRIGHT */}
         <div className="mt-12 text-center text-xs text-gray-400">
           © {new Date().getFullYear()} HM Marketing Designs. All rights reserved.
         </div>
@@ -101,6 +112,7 @@ export default function Footer() {
     </footer>
   );
 }
+
 
 
 
