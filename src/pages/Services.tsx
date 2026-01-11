@@ -21,7 +21,6 @@ export default function Services() {
             name="description"
             content="Local SEO services designed to increase visibility, rankings, and inbound leads for small businesses."
           />
-       
         </Helmet>
       )}
 
@@ -175,5 +174,3 @@ export default function Services() {
   );
 }
 
-  );
-}
