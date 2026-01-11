@@ -21,7 +21,7 @@ export default function Services() {
             name="description"
             content="Local SEO services designed to increase visibility, rankings, and inbound leads for small businesses."
           />
-          <link rel="canonical" href="https://www.hmmarketingdesigns.com/services" />
+       
         </Helmet>
       )}
 
