@@ -1,6 +1,10 @@
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 export default function Services() {
+  const location = useLocation();
+  const isServicesPage = location.pathname === '/services';
+
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -10,14 +14,16 @@ export default function Services() {
 
   return (
     <>
-      <Helmet>
-        <title>Local SEO Services | HM Marketing Designs</title>
-        <meta
-          name="description"
-          content="Local SEO services designed to increase visibility, rankings, and inbound leads for small businesses."
-        />
-        <link rel="canonical" href="https://hmmarketingdesigns.com/services" />
-      </Helmet>
+      {isServicesPage && (
+        <Helmet>
+          <title>Local SEO Services | HM Marketing Designs</title>
+          <meta
+            name="description"
+            content="Local SEO services designed to increase visibility, rankings, and inbound leads for small businesses."
+          />
+          <link rel="canonical" href="https://www.hmmarketingdesigns.com/services" />
+        </Helmet>
+      )}
 
       <section className="bg-black py-24">
         <div className="max-w-7xl mx-auto px-6">
@@ -33,8 +39,6 @@ export default function Services() {
           </div>
 
           <div className="max-w-4xl mx-auto space-y-12">
-
-            {/* SEO Service Box */}
             <div className="relative rounded-xl bg-[#c9a24d] p-[2px]">
               <div className="rounded-lg bg-black p-6 sm:p-8 md:p-10 text-center">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-medium text-[#f5e6b0] mb-6 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
@@ -52,16 +56,14 @@ export default function Services() {
                 </h2>
 
                 <p className="text-base sm:text-lg text-gray-200 leading-relaxed mb-4">
-                  We optimize your Google Business Profile, fix your website's SEO structure, and manage your directory listings to get you ranking when customers search.
+                  We optimize your Google Business Profile, fix your website&apos;s SEO structure, and manage your directory listings to get you ranking when customers search.
                 </p>
                 <p className="text-base sm:text-lg text-gray-200 leading-relaxed mb-8">
                   More visibility means more calls and more paying customers.
                 </p>
 
                 <div className="mb-8">
-                  <h3 className="text-lg sm:text-xl font-serif text-[#f5e6b0] mb-4">
-                    What You Get:
-                  </h3>
+                  <h3 className="text-lg sm:text-xl font-serif text-[#f5e6b0] mb-4">What You Get:</h3>
                   <ul className="space-y-3 text-base text-gray-200 text-left inline-block max-w-full">
                     <li className="flex items-start">
                       <span className="text-[#c9a24d] mr-3 flex-shrink-0">•</span>
@@ -83,28 +85,19 @@ export default function Services() {
                 </div>
 
                 <div className="border-t border-[#c9a24d]/30 pt-6">
-                  <h3 className="text-lg sm:text-xl font-serif text-[#f5e6b0] mb-4">
-                    Choose Your Package:
-                  </h3>
+                  <h3 className="text-lg sm:text-xl font-serif text-[#f5e6b0] mb-4">Choose Your Package:</h3>
                   <div className="space-y-2 text-base text-gray-200">
                     <p>
-                      <span className="text-[#c9a24d] font-medium">
-                        First Page Package
-                      </span>{' '}
-                      – Top 10 visibility
+                      <span className="text-[#c9a24d] font-medium">First Page Package</span> – Top 10 visibility
                     </p>
                     <p>
-                      <span className="text-[#c9a24d] font-medium">
-                        Premium Package
-                      </span>{' '}
-                      – Top 3 placement
+                      <span className="text-[#c9a24d] font-medium">Premium Package</span> – Top 3 placement
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Website Service Box */}
             <div className="relative rounded-xl bg-[#c9a24d] p-[2px]">
               <div className="rounded-lg bg-black p-6 sm:p-8 md:p-10 text-center">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-medium text-[#f5e6b0] mb-6">
@@ -112,13 +105,11 @@ export default function Services() {
                 </h2>
 
                 <p className="text-base sm:text-lg text-gray-200 leading-relaxed mb-8">
-                  Your website loads fast, works on any device, and makes it easy for customers to contact you. You own everything, just a yearly domain fee, no one holds it hostage. No constant maintenance like other platforms require. Need changes down the road? I'm available hourly, but the site doesn't need ongoing work to keep running.
+                  Your website loads fast, works on any device, and makes it easy for customers to contact you. You own everything, just a yearly domain fee, no one holds it hostage. No constant maintenance like other platforms require. Need changes down the road? I&apos;m available hourly, but the site doesn&apos;t need ongoing work to keep running.
                 </p>
 
                 <div className="mb-8">
-                  <h3 className="text-lg sm:text-xl font-serif text-[#f5e6b0] mb-4">
-                    What You Get:
-                  </h3>
+                  <h3 className="text-lg sm:text-xl font-serif text-[#f5e6b0] mb-4">What You Get:</h3>
                   <ul className="space-y-3 text-base text-gray-200 text-left inline-block max-w-full">
                     <li className="flex items-start">
                       <span className="text-[#c9a24d] mr-3 flex-shrink-0">•</span>
@@ -144,7 +135,6 @@ export default function Services() {
                 </div>
               </div>
             </div>
-
           </div>
 
           <div className="text-center mt-16">
@@ -182,5 +172,8 @@ export default function Services() {
         </div>
       </section>
     </>
+  );
+}
+
   );
 }
