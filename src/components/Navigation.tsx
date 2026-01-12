@@ -1,6 +1,20 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function Navigation() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  function scrollTo(id: string) {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 50);
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <nav className="bg-black border-none shadow-none">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -13,31 +27,21 @@ export default function Navigation() {
             alt="HM Marketing Designs Logo"
           />
         </Link>
-        
+
         <div className="flex gap-6 text-sm text-gray-300">
           <button
-            type="button"
-            onClick={() =>
-              document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
-            }
+            onClick={() => scrollTo("services")}
             className="hover:text-[#d4af37]"
           >
             Services
           </button>
-          <button
-            type="button"
-            onClick={() =>
-              document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })
-            }
-            className="hover:text-[#d4af37]"
-          >
+
+          <Link to="/case-studies" className="hover:text-[#d4af37]">
             Case Studies
-          </button>
+          </Link>
+
           <button
-            type="button"
-            onClick={() =>
-              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-            }
+            onClick={() => scrollTo("contact")}
             className="hover:text-[#d4af37]"
           >
             Contact
@@ -47,3 +51,4 @@ export default function Navigation() {
     </nav>
   );
 }
+
