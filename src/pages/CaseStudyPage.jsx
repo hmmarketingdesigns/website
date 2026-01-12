@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export default function CaseStudies() {
   const [viewingCaseStudy, setViewingCaseStudy] = useState(false);
@@ -45,7 +46,7 @@ export default function CaseStudies() {
       alt: "Small Engine Repair - Ranking #1"
     },
     {
-      src: "https://raw.githubusercontent.com/hmmarketingdesigns/Images/main/Atv2.webp", // ← Add your ATV repair heatmap URL here
+      src: "https://raw.githubusercontent.com/hmmarketingdesigns/Images/main/Atv2.webp",
       alt: "ATV Repair - Ranking #4"
     }
   ];
@@ -54,6 +55,15 @@ export default function CaseStudies() {
   if (viewingCaseStudy) {
     return (
       <>
+        <Helmet>
+          <title>Nick's Little Engine Shop Case Study | HM Marketing Designs</title>
+          <meta
+            name="description"
+            content="See how HM Marketing Designs helped a local small engine repair shop achieve #1 rankings for lawn mower repair and small engine repair within 90 days."
+          />
+          <link rel="canonical" href="https://hmmarketingdesigns.com/case-studies" />
+        </Helmet>
+
         <section className="bg-black text-white py-24 min-h-screen">
           <div className="max-w-5xl mx-auto px-6">
             {/* Back Button */}
@@ -185,68 +195,79 @@ export default function CaseStudies() {
 
   // Default: Show case studies grid
   return (
-    <section className="bg-black text-white py-24">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* SECTION HEADER */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-4">Case Studies</h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Real-world examples showing how local businesses regained visibility,
-            rankings, and inbound demand.
-          </p>
-        </div>
+    <>
+      <Helmet>
+        <title>Case Studies | HM Marketing Designs</title>
+        <meta
+          name="description"
+          content="Real-world examples showing how HM Marketing Designs improves local business visibility, rankings, and inbound demand through proven SEO strategies."
+        />
+        <link rel="canonical" href="https://hmmarketingdesigns.com/case-studies" />
+      </Helmet>
 
-        {/* 6 SQUARES (1 LIVE + 5 COMING SOON) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Case Study 1 (LIVE) */}
-          <button
-            type="button"
-            onClick={() => setViewingCaseStudy(true)}
-            className={`${cardBase} text-left hover:bg-[#0f0f0f] cursor-pointer`}
-          >
-            <h3 className="text-xl font-semibold mb-3">
-              Local Small Engine Repair Shop
-            </h3>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              Website rebuild, Google Business Profile correction, and SEO foundation
-              focused on the business's current repair services.
+      <section className="bg-black text-white py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          {/* SECTION HEADER */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-semibold mb-4">Case Studies</h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Real-world examples showing how local businesses regained visibility,
+              rankings, and inbound demand.
             </p>
-            <p className="mt-4 text-sm font-medium text-[#d4af37]">
-              View case study →
-            </p>
-          </button>
-
-          {/* Coming Soon #2 */}
-          <div className={comingSoonBase}>
-            <h3 className="text-xl font-semibold mb-3 text-gray-200">Coming Soon</h3>
-            <p className="text-sm text-gray-400">Additional case studies will be added.</p>
           </div>
 
-          {/* Coming Soon #3 */}
-          <div className={comingSoonBase}>
-            <h3 className="text-xl font-semibold mb-3 text-gray-200">Coming Soon</h3>
-            <p className="text-sm text-gray-400">Additional case studies will be added.</p>
-          </div>
+          {/* 6 SQUARES (1 LIVE + 5 COMING SOON) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Case Study 1 (LIVE) */}
+            <button
+              type="button"
+              onClick={() => setViewingCaseStudy(true)}
+              className={`${cardBase} text-left hover:bg-[#0f0f0f] cursor-pointer`}
+            >
+              <h3 className="text-xl font-semibold mb-3">
+                Local Small Engine Repair Shop
+              </h3>
+              <p className="text-sm text-gray-300 leading-relaxed">
+                Website rebuild, Google Business Profile correction, and SEO foundation
+                focused on the business's current repair services.
+              </p>
+              <p className="mt-4 text-sm font-medium text-[#d4af37]">
+                View case study →
+              </p>
+            </button>
 
-          {/* Coming Soon #4 */}
-          <div className={comingSoonBase}>
-            <h3 className="text-xl font-semibold mb-3 text-gray-200">Coming Soon</h3>
-            <p className="text-sm text-gray-400">Additional case studies will be added.</p>
-          </div>
+            {/* Coming Soon #2 */}
+            <div className={comingSoonBase}>
+              <h3 className="text-xl font-semibold mb-3 text-gray-200">Coming Soon</h3>
+              <p className="text-sm text-gray-400">Additional case studies will be added.</p>
+            </div>
 
-          {/* Coming Soon #5 */}
-          <div className={comingSoonBase}>
-            <h3 className="text-xl font-semibold mb-3 text-gray-200">Coming Soon</h3>
-            <p className="text-sm text-gray-400">Additional case studies will be added.</p>
-          </div>
+            {/* Coming Soon #3 */}
+            <div className={comingSoonBase}>
+              <h3 className="text-xl font-semibold mb-3 text-gray-200">Coming Soon</h3>
+              <p className="text-sm text-gray-400">Additional case studies will be added.</p>
+            </div>
 
-          {/* Coming Soon #6 */}
-          <div className={comingSoonBase}>
-            <h3 className="text-xl font-semibold mb-3 text-gray-200">Coming Soon</h3>
-            <p className="text-sm text-gray-400">Additional case studies will be added.</p>
+            {/* Coming Soon #4 */}
+            <div className={comingSoonBase}>
+              <h3 className="text-xl font-semibold mb-3 text-gray-200">Coming Soon</h3>
+              <p className="text-sm text-gray-400">Additional case studies will be added.</p>
+            </div>
+
+            {/* Coming Soon #5 */}
+            <div className={comingSoonBase}>
+              <h3 className="text-xl font-semibold mb-3 text-gray-200">Coming Soon</h3>
+              <p className="text-sm text-gray-400">Additional case studies will be added.</p>
+            </div>
+
+            {/* Coming Soon #6 */}
+            <div className={comingSoonBase}>
+              <h3 className="text-xl font-semibold mb-3 text-gray-200">Coming Soon</h3>
+              <p className="text-sm text-gray-400">Additional case studies will be added.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
