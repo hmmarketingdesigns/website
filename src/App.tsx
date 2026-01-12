@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
       <Navigation />
-
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -16,7 +15,6 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
-
       <Footer />
     </div>
   );
