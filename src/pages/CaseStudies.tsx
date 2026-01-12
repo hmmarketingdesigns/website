@@ -14,7 +14,7 @@ export default function CaseStudies() {
             name="description"
             content="Real-world examples showing how HM Marketing Designs improves visibility and inbound demand."
           />
-          <meta name="robots" content="noindex,follow" />
+          <meta name="robots" content="index,follow" />
           <link
             rel="canonical"
             href="https://hmmarketingdesigns.com/case-studies"
