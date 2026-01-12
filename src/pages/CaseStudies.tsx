@@ -24,7 +24,6 @@ export default function CaseStudies() {
 
       <div className="bg-black py-24">
         <div className="max-w-4xl mx-auto px-6">
-
           {/* SECTION HEADER (matches Contact Us) */}
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-semibold text-[#f5f5f5] mb-4">
@@ -48,7 +47,7 @@ export default function CaseStudies() {
           {/* CTA OUTSIDE THE BOX */}
           <div className="text-center">
             <Link
-              to="/case-study"
+              to="/case-studies"
               className="
                 inline-flex items-center justify-center
                 px-12 py-4
@@ -66,11 +65,11 @@ export default function CaseStudies() {
               Our Case Studies
             </Link>
           </div>
-
         </div>
       </div>
     </>
   );
 }
+
 
 
