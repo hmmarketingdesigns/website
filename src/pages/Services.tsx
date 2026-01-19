@@ -14,15 +14,20 @@ export default function Services() {
 
   return (
     <>
-      {isServicesPage && (
+          {isServicesPage && (
         <Helmet>
-          <title>Local SEO Services | HM Marketing Designs</title>
-          <meta
-            name="description"
-            content="Local SEO services designed to increase visibility, rankings, and inbound leads for small businesses."
-          />
-        </Helmet>
-      )}
+         <title>Local SEO Services | HM Marketing Designs</title>
+             <meta
+               name="description"
+               content="Local SEO services designed to increase visibility, rankings, and inbound leads for small businesses."
+             />
+              <link
+               rel="canonical"
+            href="https://hmmarketingdesigns.com/services"
+              />
+          </Helmet>
+         )}
+
 
       <section className="bg-black py-24">
         <div className="max-w-7xl mx-auto px-6">
