@@ -93,7 +93,7 @@ export default function Footer() {
               Connect
             </p>
             <a
-              href="https://www.facebook.com/profile.php?id=61586140072044"
+              href="https://www.facebook.com/hmmarketingdesigns/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
