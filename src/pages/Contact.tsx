@@ -79,7 +79,7 @@ export default function Contact() {
             <ul className="space-y-3 text-gray-300">
               <li>
                 <span className="text-[#c9a24d] font-medium">Email:</span>{' '}
-                hmmarketingdesigns@gmail.com
+                hm@hmmarketingdesigns.com
               </li>
               <li>
                 <span className="text-[#c9a24d] font-medium">Location:</span> United States
